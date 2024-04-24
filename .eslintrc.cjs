@@ -6,7 +6,7 @@ module.exports = {
   },
   extends: ['airbnb-typescript/base', 'plugin:prettier/recommended'],
   parser: '@typescript-eslint/parser',
-  ignorePatterns: ['.eslintrc.cjs', 'dist/*'],
+  ignorePatterns: ['.eslintrc.cjs', 'dist/*', 'vite.config.mjs'],
   parserOptions: {
     ecmaVersion: 12,
     sourceType: 'module',
@@ -29,7 +29,7 @@ module.exports = {
   },
   overrides: [
     {
-      excludedFiles: 'node_modules/**',
+      excludedFiles: ['node_modules/**', '*.cjs'],
       files: ["**/*.ts"],
     },
   ],
