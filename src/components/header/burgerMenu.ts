@@ -21,6 +21,14 @@ export default class BurgerMenu {
 
   private initEvents(): void {
     this.toggleButton.addEventListener('click', () => this.toggleMenu());
+    const menuItems = this.header.querySelectorAll('.header__menu-anchor, .header__cart-link, .header__social-link');
+    menuItems.forEach((item) => {
+      item.addEventListener('click', () => {
+        if (this.header.classList.contains('active')) {
+          this.toggleMenu();
+        }
+      });
+    });
     window.addEventListener('resize', this.handleResize);
   }
 
