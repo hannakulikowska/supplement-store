@@ -7,6 +7,7 @@
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="preload" href="/src/assets/fonts/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/src/assets/fonts/Roboto-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/src/assets/fonts/Oswald-Medium.woff2" as="font" type="font/woff2" crossorigin>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Suxnix</title>
   <meta name="description" content="Supplement shop">
@@ -23,12 +24,12 @@
       <div class="header__menu-container">
         <nav class="header__nav">
           <ul class="header__menu">
-            <li class="header__menu-item"><a class="header__menu-link" href="/" aria-current="page">Home</a></li>
-            <li class="header__menu-item"><a class="header__menu-link" href="#features">Features</a></li>
-            <li class="header__menu-item"><a class="header__menu-link" href="#product">Product</a></li>
-            <li class="header__menu-item"><a class="header__menu-link" href="#ingredient">Ingredient</a></li>
-            <li class="header__menu-item"><a class="header__menu-link" href="#pricing">Pricing</a></li>
-            <li class="header__menu-item"><a class="header__menu-link" href="#contact">Contact</a></li>
+            <li class="header__menu-item"><a class="header__menu-anchor" href="/" aria-current="page">Home</a></li>
+            <li class="header__menu-item"><a class="header__menu-anchor" href="#features">Features</a></li>
+            <li class="header__menu-item"><a class="header__menu-anchor" href="#product">Product</a></li>
+            <li class="header__menu-item"><a class="header__menu-anchor" href="#ingredient">Ingredient</a></li>
+            <li class="header__menu-item"><a class="header__menu-anchor" href="#pricing">Pricing</a></li>
+            <li class="header__menu-item"><a class="header__menu-anchor" href="#contact">Contact</a></li>
           </ul>
         </nav>
         <a class="header__cart-link" href="/cart" aria-label="View your shopping cart">
@@ -56,13 +57,42 @@
           </li>
         </ul>
       </div>
-      <button class="header__sidebar-button" href="#" aria-label="Toggle menu" aria-expanded="false">
+      <button class="header__burger-button" aria-label="Toggle menu" aria-expanded="false">
         <i class="header__icon material-symbols-outlined-view-cozy" aria-hidden="true">
         </i>
       </button>
     </div>
     </div>
   </header>
+  <main class="main">
+    <section class="banner">
+      <div class="banner__container">
+        <p class="banner__tagline">..&nbsp;Increased energy with Suxnix&nbsp;..</p>
+        <h1 class="banner__title">Mix protein provided way to growth</h1>
+        <a class="banner__product-button" target="_self" rel="nofollow" href="#product">Shop now</a>
+        <div class="banner__images-container">
+          <img class="banner__image-background" src="src/assets/img/banner-green-bg.png" alt="" role="presentation">
+          <img class="banner__image-products" src="src/assets/img/banner-products.png" alt="Product image on banner">
+        </div>
+      </div>
+      <div class="banner__bg-img-wrapper--top-left">
+        <img class="banner__bg-img--top-left" decoding="async" src="src/assets/img/banner-bg-img-01.png" alt=""
+          role="presentation">
+      </div>
+      <div class="banner__bg-img-wrapper--top-right">
+        <img class="banner__bg-img--top-right" decoding="async" src="src/assets/img/banner-bg-img-02.png" alt=""
+          role="presentation">
+      </div>
+      <div class="banner__bg-img-wrapper--bottom-left">
+        <img class="banner__bg-img--bottom-left" decoding="async" src="src/assets/img/banner-bg-img-03.png" alt=""
+          role="presentation">
+      </div>
+      <div class="banner__bg-img-wrapper--bottom-right">
+        <img class="banner__bg-img--bottom-right" decoding="async" src="src/assets/img/banner-bg-img-04.png" alt=""
+          role="presentation">
+      </div>
+    </section>
+  </main>
   <script type="module" src="/src/main.ts"></script>
 </body>
 

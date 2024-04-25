@@ -4,7 +4,9 @@
 @import './fonts.scss';
 @import './symbols.scss';
 @import './fontello.scss';
+@import './keyframes.scss';
 @import './components/header/header.scss';
+@import './components/banner/banner.scss';
 
 html,
 body,
@@ -44,8 +46,22 @@ button {
   line-height: 1;
 }
 
+img {
+  height: auto;
+  max-width: 100%;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  transition: .5s;
+}
+
 .container {
   max-width: 1440px;
   margin: 0 auto;
   padding: calc((5 - 1.15)* 1.1vw + .8rem) 1rem calc((7 - 1.15)* 1.1vw + .8rem);
+}
+
+.no-scroll {
+  overflow: hidden;
+  position: fixed;
 }

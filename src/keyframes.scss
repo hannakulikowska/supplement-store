@@ -13,3 +13,51 @@
     transform: translateY(0);
   }
 }
+
+@keyframes bannerFadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-50px);
+    -ms-transform: translateX(-50px);
+    transform: translateX(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes bannerFadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+    -ms-transform: translateX(50px);
+    transform: translateX(50px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes bannerFadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-50px);
+    -ms-transform: translateY(-50px);
+    transform: translateY(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
