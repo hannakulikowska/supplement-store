@@ -7,6 +7,8 @@
     "test": "npm run ci:format",
     "dev": "vite",
     "build": "tsc && vite build",
+    "build:gh-pages": "tsc && vite build --mode production",
+    "build:wp": "tsc && vite build --mode wordpress",
     "preview": "vite preview",
     "format": "prettier --write .",
     "ci:format": "prettier --check .",
