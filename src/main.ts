@@ -1,8 +1,8 @@
 import './style.scss';
 import BurgerMenu from './components/header/burgerMenu';
-import HeaderChanger from './components/header/headerChanger';
+import StickyHeader from './components/header/stickyHeader';
 
 document.addEventListener('DOMContentLoaded', () => {
-  new BurgerMenu('.header__sidebar-button', '.header');
-  new HeaderChanger('.header', '#target-section');
+  new BurgerMenu('.header__burger-button', '.header');
+  new StickyHeader('.header');
 });

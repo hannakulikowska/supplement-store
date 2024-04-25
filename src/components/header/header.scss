@@ -1,18 +1,18 @@
 .header {
   width: 100%;
+  z-index: 1;
+  background-color: $body-bg;
 }
 
-.header--fixed {
-  position: fixed;
-  left: 0;
+.header--sticky {
+  position: sticky;
   top: 0;
-  z-index: 1;
   animation: 1000ms ease-in-out 0s normal none 1 running fadeInDown;
   box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
 }
 
 .header__container {
-  padding: 23px 15px;
+  padding: 15px;
   margin: 0 auto;
   max-width: 1650px;
   @include flex (space-between, center);
@@ -33,20 +33,21 @@
   }
 }
 
-
 .header__menu-container {
   @include flex (flex-start, center);
   width: 100%;
 
+  // Mobile menu
   @media screen and (max-width: 924px) {
     position: fixed;
-    top: 106px;
+    top: 90px;
     right: -100%;
     flex-direction: column;
-    gap: 30px;
-    height: calc(100dvh - 106px);
+    gap: 20px;
+    height: calc(100dvh - 90px);
     transition: right 0.5s ease-in;
     overflow-y: auto;
+    background-color: $body-bg;
   }
 }
 
@@ -57,6 +58,11 @@
 .header__nav {
   @include flex(center, center);
   width: 100%;
+  margin-left: -7%;
+}
+
+.header.active .header__nav {
+  margin-left: 7px;
 }
 
 .header__menu {
@@ -67,7 +73,6 @@
   @media screen and (max-width: 924px) {
     flex-direction: column;
     align-items: flex-start;
-    padding-top: 2em;
   }
 }
 
@@ -77,16 +82,21 @@
 
   @media screen and (max-width: 924px) {
     align-items: flex-start;
-    padding-left: calc(50% - 40px);
+    justify-content: stretch;
     width: 100%;
   }
 }
 
-.header__menu-link {
+.header__menu-anchor {
   font-size: 1em;
+  line-height: 1;
   color: $text;
-  padding: 1em;
+  padding: 38px 24px;
   transition: .3s ease-in-out;
+
+  @media screen and (max-width: 1024px) {
+    padding: 24px 16px;
+  }
 
   &:hover {
     @media(hover:hover) {
@@ -110,7 +120,7 @@
   outline: medium none;
   text-align: center;
   color: $text;
-
+  padding: 20px;
 
   @media (hover:hover) {
     &:hover .header__icon.material-symbols-outlined-shopping-cart:before {
@@ -120,14 +130,14 @@
 
   @media screen and (max-width: 924px) {
     display: inline-flex;
-    width: auto;
+    order: 1;
   }
 }
 
 .header__cart-count {
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 20px;
+  top: 20px;
   width: 20px;
   height: 20px;
   text-align: center;
@@ -139,8 +149,8 @@
   color: #fff;
 }
 
-.header__sidebar-button {
-  @include flex (center, center);
+.header__burger-button {
+  display: none;
   min-width: 60px;
   min-height: 60px;
   text-align: center;
@@ -159,10 +169,14 @@
     min-width: 46px;
     min-height: 46px;
   }
+
+  @media screen and (max-width: 924px) {
+    @include flex (center, center);
+  }
 }
 
 @media (hover:hover) {
-  .header__sidebar-button:hover .header__icon {
+  .header__burger-button:hover .header__icon {
     rotate: 360deg;
   }
 }
@@ -175,8 +189,9 @@
   @media screen and (max-width: 924px) {
     @include flex (center, center);
     flex-wrap: wrap;
-    padding: 50px 15px 20px;
+    padding: 20px 15px;
     gap: 10px;
+    order: 3;
   }
 }
 
@@ -188,7 +203,6 @@
 
   .header__social-item:hover [class*=" icon-"]:before {
     color: $body-bg;
-
   }
 }
 
